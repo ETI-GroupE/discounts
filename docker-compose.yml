@@ -1,0 +1,23 @@
+version: "3.6"
+services:
+    app:
+        depends_on:
+         - db
+        image: discountsvc-image
+        ports:
+            - 6327:6327
+        restart: always
+
+    db:
+        image: mysql
+        restart: always
+        volumes:
+            - db-data:/var/lib/mysql
+            
+        environment:
+            MYSQL_DATABASE: "discountdb"
+            MYSQL_USER: "root"
+            MYSQL_PASSWORD: "password"
+            MYSQL_ROOT_PASSWORD: "plsdonthackme642"
+volumes:
+    db-data:
