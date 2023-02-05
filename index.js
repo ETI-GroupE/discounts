@@ -15,7 +15,7 @@ database:'discountdb'
 
 const port = 6327
 
-app.get("/api/v1/discountapply/:shopcartId/:discount_id",(req,res) =>{
+app.post("/api/v1/discountapply/:shopcartId/:discount_id",(req,res) =>{
    const discountId = req.params.discount_id;
    const shopCartId = req.params.shopcartId;
    dbwrite.query("insert into cartdiscount values(?,?)",[shopCartId,discountId],function(err,results){
