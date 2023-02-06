@@ -1,17 +1,20 @@
 
 const express = require('express')
 const app = express()
+const pw = process.env.password;
 
 const mysql = require('mysql2')
 const dbwrite = mysql.createPool({
 host:"34.142.197.56",
 user:"root",
-password:process.env.password,
+password:pw,
 port:3306,
 database:'discountdb'
 
 
 })
+
+
 
 const port = 6327
 
