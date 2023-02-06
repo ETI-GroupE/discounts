@@ -6,7 +6,7 @@ const mysql = require('mysql2')
 const dbwrite = mysql.createPool({
 host:"34.142.197.56",
 user:"root",
-password:'plsdonthackme642',
+password:process.env.password,
 port:3306,
 database:'discountdb'
 
