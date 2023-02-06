@@ -18,6 +18,6 @@ services:
             MYSQL_DATABASE: "discountdb"
             MYSQL_USER: "root"
             MYSQL_PASSWORD: "password"
-            MYSQL_ROOT_PASSWORD: "plsdonthackme642"
+            MYSQL_ROOT_PASSWORD: "password"
 volumes:
     db-data:
